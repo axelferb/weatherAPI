@@ -25,7 +25,10 @@ function getTodaysWeather(city) {
 
             currentWeatherDiv.innerHTML =
                 `
-                <i class="owf owf-${weatherData.list[0].weather[0].id}"></i>
+            <h2>
+            Nuvarande väder
+            </h2>
+            <i class="owf owf-${weatherData.list[0].weather[0].id}"></i>
             <p>
             ${weatherData.list[0].weather[0].description}
             ${weatherData.list[0].main.temp}°C
@@ -36,7 +39,10 @@ function getTodaysWeather(city) {
 
             weatherTomorrow.innerHTML =
                 `
-                <i class="owf owf-${weatherData.list[8].weather[0].id}"></i>
+            <h2>
+            Vädret imorgon vid 12:00
+            </h2>
+            <i class="owf owf-${weatherData.list[8].weather[0].id}"></i>
             <p>
             ${weatherData.list[8].weather[0].description}
             ${weatherData.list[8].main.temp}°C
@@ -47,7 +53,10 @@ function getTodaysWeather(city) {
 
             weatherDayAfterTomorrow.innerHTML =
                 `
-                <i class="owf owf-${weatherData.list[16].weather[0].id}"></i>
+            <h2>
+            Vädret i övermorgon vid 12:00
+            </h2>
+            <i class="owf owf-${weatherData.list[16].weather[0].id}"></i>
             <p>
             ${weatherData.list[16].weather[0].description}
             ${weatherData.list[16].main.temp}°C
@@ -58,7 +67,10 @@ function getTodaysWeather(city) {
 
             weatherThreeDays.innerHTML =
                 `
-                <i class="owf owf-${weatherData.list[24].weather[0].id}"></i>
+            <h2>
+            Vädret tre dagar framåt vid 12:00
+            </h2>
+            <i class="owf owf-${weatherData.list[24].weather[0].id}"></i>
             <p>
             ${weatherData.list[24].weather[0].description}
             ${weatherData.list[24].main.temp}°C
