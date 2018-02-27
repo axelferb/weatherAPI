@@ -10,10 +10,8 @@ body {
 }
 
 header {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 header h1 {
@@ -27,6 +25,16 @@ h2, p {
     color: whitesmoke;
     text-shadow: 1px 1px #000000;
     text-transform: uppercase;
+}
+
+#headertext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headersearch {
+    text-align: center;
 }
 
 .gridholder {
