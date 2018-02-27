@@ -1,13 +1,29 @@
 //14cb918beacf21808d7ad879ed6129b0
+const citySearch = document.getElementById("citySearch");
+const headertext = document.getElementById("headertext");
 
-function getTodaysWeather() {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?q=Stockholm,se&units=metric&lang=se&APPID=14cb918beacf21808d7ad879ed6129b0')
+citySearch.addEventListener('change', function () {
+    const searchValue = citySearch.value;
+    getTodaysWeather(searchValue);
+    headertext.innerHTML =
+        `
+    <h1>
+    Vädret i 
+    ${searchValue}
+    </h1>
+    `;
+});
+
+
+
+function getTodaysWeather(city) {
+    fetch('http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&lang=se&APPID=14cb918beacf21808d7ad879ed6129b0')
         .then(function (response) {
             return response.json();
         })
         .then(function (weatherData) {
 
-            currentWeatherDiv.innerHTML +=
+            currentWeatherDiv.innerHTML =
                 `
                 <i class="owf owf-${weatherData.list[0].weather[0].id}"></i>
             <p>
@@ -18,7 +34,7 @@ function getTodaysWeather() {
             </p>
             `;
 
-            weatherTomorrow.innerHTML +=
+            weatherTomorrow.innerHTML =
                 `
                 <i class="owf owf-${weatherData.list[8].weather[0].id}"></i>
             <p>
@@ -29,7 +45,7 @@ function getTodaysWeather() {
             </p>
             `;
 
-            weatherDayAfterTomorrow.innerHTML +=
+            weatherDayAfterTomorrow.innerHTML =
                 `
                 <i class="owf owf-${weatherData.list[16].weather[0].id}"></i>
             <p>
@@ -40,7 +56,7 @@ function getTodaysWeather() {
             </p>
             `;
 
-            weatherThreeDays.innerHTML +=
+            weatherThreeDays.innerHTML =
                 `
                 <i class="owf owf-${weatherData.list[24].weather[0].id}"></i>
             <p>
