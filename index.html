@@ -6,14 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebbApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="css/owfont-regular.css" rel="stylesheet" type="text/css">
 </head>
-<nav>
-
-</nav>
+<header>
+    <h1>
+        Väder i Stockholm
+    </h1>
+</header>
 
 <body>
-
+    <div id="currentWeatherDiv">
+        <h2>
+            Nuvarande väder
+        </h2>
+    </div>
+    <div class="gridholder">
+        <div id="weatherTomorrow">
+            <h2>
+                Vädret imorgon vid 12:00
+            </h2>
+        </div>
+        <div id="weatherDayAfterTomorrow">
+            <h2>
+                Vädret i övermorgon vid 12:00
+            </h2>
+        </div>
+        <div id="weatherThreeDays">
+            <h2>
+                Vädret tre dagar framåt vid 12:00
+            </h2>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 

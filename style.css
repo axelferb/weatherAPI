@@ -1,8 +1,43 @@
-body {
-    margin: 0 auto;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+html {
+    height: 100%;
 }
 
-nav {
+body {
+    margin: 0 auto;
+    height: 100%;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: whitesmoke;
+    text-shadow: 1px 1px #202020;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+h2, p {
+    color: whitesmoke;
+    text-shadow: 1px 1px #000000;
+    text-transform: uppercase;
+}
+
+.gridholder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#currentWeatherDiv, #weatherTomorrow, #weatherDayAfterTomorrow, #weatherThreeDays {
+    text-align: center;
+}
+
+#currentWeatherDiv > i, #weatherTomorrow > i, #weatherDayAfterTomorrow > i, #weatherThreeDays > i {
+    font-size: 8em;
 }
